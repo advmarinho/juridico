@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Procuração Judicial</title>
+  <style>
+    @media print {
+      body {
+        margin: 2cm;
+        font-size: 12pt;
+      }
+      .documento {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      button, .footer {
+        display: none !important;
+      }
+    }
+
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #f2f2f2;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 20pt;
+      text-decoration: underline;
+    }
+
+    .documento {
+      background-color: #fff;
+      padding: 40px;
+      width: 21cm;
+      min-height: 29.7cm;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+
+    .campo, textarea {
+      border: none;
+      border-bottom: 1px solid #000;
+      display: inline;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 2px 4px;
+      min-width: 1ch;
+      background: transparent;
+      text-align: justify;
+    }
+
+    .campo {
+      width: auto;
+      min-width: 5ch;
+      max-width: 100%;
+      transition: width 0.2s;
+    }
+
+    input.campo::placeholder {
+      color: #888;
+    }
+
+    input.campo:focus {
+      outline: none;
+    }
+
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+      resize: vertical;
+    }
+
+    .grupo {
+      margin: 24px 0;
+    }
+
+    .negrito {
+      font-weight: bold;
+    }
+
+    button {
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 10px 5px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #1558b0;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+    }
+
+    .footer a {
+      color: #1a73e8;
+      text-decoration: none;
+      margin: 0 6px;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="documento" id="conteudo">
+    <h1>PROCURAÇÃO</h1>
+    <form id="form-procuracao">
+      <div class="grupo">
+        <span class="negrito">OUTORGANTE:</span>
+        <input class="campo" name="name" placeholder="Nome completo" required>,
+        menor absolutamente incapaz, nascido em
+        <input class="campo" name="nascimento" placeholder="Data de nascimento" required>,
+        neste ato representado por seu responsável legal:
+        <input class="campo" name="responsavel" placeholder="Nome do responsável" required>, inscrito no CPF nº
+        <input class="campo" name="cpf" placeholder="CPF" required>.<br><br>
+
+        Nacionalidade
+        <input class="campo" name="nacionalidade" placeholder="Nacionalidade" required>, Estado civil
+        <input class="campo" name="estado_civil" placeholder="Estado civil" required>, Profissão
+        <input class="campo" name="profissao" placeholder="Profissão" required>, e-mail
+        <input class="campo" name="email" placeholder="Email" required>.
+        Residente e domiciliado na rua
+        <input class="campo" name="logradouro" placeholder="Logradouro" required>, nº
+        <input class="campo" name="numero" placeholder="Número" required>, Bairro
+        <input class="campo" name="bairro" placeholder="Bairro" required>, Cidade
+        <input class="campo" name="cidade" placeholder="Cidade" required> –
+        <input class="campo" name="uf" placeholder="UF" required>, CEP
+        <input class="campo" name="cep" placeholder="CEP" required>.
+      </div>
+
+      <div class="grupo">
+        <span class="negrito">OUTORGADO:</span>
+        <input class="campo" name="advogado" placeholder="Nome do advogado" required>, inscrito na OAB
+        <input class="campo" name="oab" placeholder="OAB/UF" required>, com endereço profissional em
+        <input class="campo" name="end_adv" placeholder="Rua do escritório" required>, nº
+        <input class="campo" name="num_adv" placeholder="Número" required>, Bairro
+        <input class="campo" name="bairro_adv" placeholder="Bairro" required>, Cidade
+        <input class="campo" name="cidade_adv" placeholder="Cidade" required>, UF
+        <input class="campo" name="uf_adv" placeholder="UF" required>, CEP
+        <input class="campo" name="cep_adv" placeholder="CEP" required>.
+      </div>
+
+      <div class="grupo">
+        <p><span class="negrito">PODERES:</span></p>
+        <textarea name="poderes" rows="9">O(a) outorgante confere poderes ao(à) advogado(a) acima qualificado(a) para representá-lo(a) em qualquer juízo ou instância, podendo para tanto propor ações, contestar, reconvir, recorrer, firmar compromissos, confessar, desistir, transigir, receber e dar quitação, levantar alvarás, substabelecer com ou sem reserva de iguais poderes, prestar declarações, praticar todos os atos necessários à defesa dos interesses do outorgante, inclusive perante órgãos públicos, repartições fiscais, autarquias e instituições bancárias, podendo ainda assinar contratos, declarações e petições, bem como praticar todos os atos que se fizerem necessários ao fiel cumprimento deste mandato.</textarea>
+      </div>
+
+      <div class="grupo">
+        <p><span class="negrito">PODERES ESPECÍFICOS:</span></p>
+        <textarea name="poderes_especificos" rows="4">Representar o(a) outorgante em Ação de Alimentos e demais causas de Direito de Família, inclusive em audiências de conciliação e mediação.</textarea>
+      </div>
+
+      <div class="grupo">
+        Cidade:
+        <input class="campo" name="cidade_ass" placeholder="Cidade" required>,
+        <input class="campo" name="data" placeholder="Data" required><br><br>
+        __________________________________________<br>
+        Assinatura do Outorgante
+      </div>
+
+      <button type="submit">📧 Enviar por E-mail</button>
+    </form>
+    <button onclick="window.print()">🖨️ Imprimir</button>
+    <button onclick="salvarComoWord()">📝 Salvar como Word</button>
+    <button onclick="salvarCSV()">💾 Salvar como CSV</button>
+  </div>
+
+  <div class="footer">
+    By Anderson Marinho — 
+    <a href="https://x.com/igarape_digital" target="_blank">X @igarape_digital</a> |
+    <a href="https://github.com/advmarinho" target="_blank">GitHub advmarinho</a>
+  </div>
+
+  <script>
+    // Ajuste dinâmico dos campos
+    document.querySelectorAll('input.campo').forEach(input => {
+      const ajustarLargura = (el) => {
+        const span = document.createElement('span');
+        span.style.visibility = 'hidden';
+        span.style.position = 'absolute';
+        span.style.whiteSpace = 'pre';
+        span.style.fontFamily = getComputedStyle(el).fontFamily;
+        span.style.fontSize = getComputedStyle(el).fontSize;
+        span.textContent = el.value || el.placeholder || '';
+        document.body.appendChild(span);
+        el.style.width = span.offsetWidth + 20 + 'px';
+        document.body.removeChild(span);
+      };
+      ajustarLargura(input);
+      input.addEventListener('input', () => ajustarLargura(input));
+    });
+
+    // Salvar como Word
+    function salvarComoWord() {
+      const content = document.getElementById('conteudo').cloneNode(true);
+      const inputs = content.querySelectorAll('input, textarea');
+      inputs.forEach(el => {
+        const span = document.createElement('span');
+        span.textContent = el.value;
+        el.parentNode.replaceChild(span, el);
+      });
+      const blob = new Blob(['<html><body>' + content.innerHTML + '</body></html>'], {
+        type: 'application/msword'
+      });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'procuracao.doc';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Salvar como CSV
+    function salvarCSV() {
+      const form = document.getElementById('form-procuracao');
+      const formData = new FormData(form);
+      let csv = 'Campo,Valor\n';
+      formData.forEach((value, key) => {
+        csv += `"${key}","${value.replace(/"/g, '""')}"\n`;
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'procuracao_dados.csv';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
